@@ -1,53 +1,55 @@
-.gradient-text {
-  background: linear-gradient(90deg, #8e6efc, #ff6b4a);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-}
-
-.btn-orange {
-  background-color: #ffa336;
-  color: #000;
-  font-weight: 600;
-  border-radius: 50rem;
-  transition: 0.3s;
-
-  &:hover {
-    background-color: #ff8c00;
-    color: #fff;
+  .hero-sec {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden; 
+    z-index: 0;
   }
-}
-.hero-image-wrapper {
-  background-color: #a274f3;
-  padding: 1.5rem;
-  border-radius: 2rem;
-  max-width: 300px;
 
+  
+  .hero-sec::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #fed6e3 ,#a8edea);
+    z-index: -1; 
+  }
+// Gradient Text
+
+
+// Orange Button
+.input-group {
+  display: flex;
+  border: 2px solid #bdbdbd;
+  border-radius: 40px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-control {
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: transparent;
+  flex: 1;
+  color: #6d6d6d;
+}
+
+.form-control::placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+}
+
+// Responsive Hero Adjustments
+@media (max-width: 768px) {
   .hero-img {
-    border-radius: 1.5rem;
-    width: 100%;
+    max-width: 100%;
     height: auto;
-  }
-}
-
-@media (max-width: 767.98px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .input-group-lg {
-    flex-direction: column;
-    align-items: stretch;
-
-    .form-control,
-    .btn {
-      width: 100%;
-      border-radius: 0 !important;
-    }
-  }
-
-  .hero-image-wrapper {
-    margin-top: 2rem;
   }
 }
