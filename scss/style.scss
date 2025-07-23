@@ -66,16 +66,17 @@ $container-max-widths : map-merge($map1: $container-max-widths, $map2: $custom-c
 @import './company.scss';
 @import'./work.scss';
 @import'footer.scss';
+@import'./cta-section.scss';
+
 
 .orange-btn {
     background: linear-gradient(90deg, #ffb347 0%, #ff914d 100%);
     color: #333;
     border: none;
     padding: 0.375rem 1.75rem;
-    border-radius: 40px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background 0.2s;
-    display: flex;
     align-items: center;
     gap: 6px;
 }
@@ -83,6 +84,7 @@ $container-max-widths : map-merge($map1: $container-max-widths, $map2: $custom-c
 .orange-btn:hover {
     background: linear-gradient(90deg, #ff914d 0%, #ffb347 100%);
 }
+
 .gradient-text {
   background: linear-gradient(90deg, #9A72F9, #F6731F);
   -webkit-background-clip: text;
