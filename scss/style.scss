@@ -1,17 +1,4 @@
-@font-face {
-    font-family: 'ClashDisplay-variable';
-    src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
-        url('../fonts/ClashDisplay-Variable.woff') format('woff'),
-        url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
-    font-weight: 200 700;
-    font-display: swap;
-    font-style: normal;
-}
 
-$enable-negative-margins: true;
-$font-family-base: "Archivo", sans-serif;
-$font-clash-display : 'ClashDisplay-variable',
-sans-serif;
 
 $font-size-base : 1rem;
 
@@ -22,10 +9,6 @@ $h4-font-size: $font-size-base * 1.25;
 $h5-font-size: $font-size-base ;
 
 // colors
-$dark: #11111B;
-$accent: #B95DFE;
-
-
 $spacer: 1rem;
 $spacers: (
     0: 0,
@@ -34,7 +17,7 @@ $spacers: (
     3: $spacer,
     4: $spacer * 1.5,
     5: $spacer * 3,
-    12: $spacer * 0.75,
+    12: $spacer * 6.625,
     20: $spacer * 1.25,
     28: $spacer * 1.75,
     38: $spacer * 2.375,
@@ -45,7 +28,7 @@ $spacers: (
     60: $spacer * 3.75,
     64: $spacer * 4,
     76: $spacer * 4.75,
-    82: $spacer * 5.125,
+    82: $spacer * 10.125,
 
 );
 
@@ -57,8 +40,7 @@ $zindex-levels: (
     3: 3
 );
 
-$body-bg: $dark;
-$body-color: white;
+
 $paragraph-margin-bottom: 0;
 
 
@@ -81,29 +63,5 @@ $container-max-widths : map-merge($map1: $container-max-widths, $map2: $custom-c
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-
-
-.font-primary {
-    font-family: 'ClashDisplay-variable';
-}
-
-.text-clash {
-    font-family: $font-clash-display;
-}
-
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $font-clash-display;
-}
-
-
-.grid-area-1\/1 {
-    grid-area: 1 / 1;
-}
-
+@import './hero-section';
+@import './header';

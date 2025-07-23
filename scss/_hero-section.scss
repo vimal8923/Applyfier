@@ -1,0 +1,53 @@
+.gradient-text {
+  background: linear-gradient(90deg, #8e6efc, #ff6b4a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.btn-orange {
+  background-color: #ffa336;
+  color: #000;
+  font-weight: 600;
+  border-radius: 50rem;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #ff8c00;
+    color: #fff;
+  }
+}
+.hero-image-wrapper {
+  background-color: #a274f3;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  max-width: 300px;
+
+  .hero-img {
+    border-radius: 1.5rem;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .input-group-lg {
+    flex-direction: column;
+    align-items: stretch;
+
+    .form-control,
+    .btn {
+      width: 100%;
+      border-radius: 0 !important;
+    }
+  }
+
+  .hero-image-wrapper {
+    margin-top: 2rem;
+  }
+}
