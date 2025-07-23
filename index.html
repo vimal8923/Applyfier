@@ -98,85 +98,100 @@
         </section>
 
         <section>
-            <div class="container text-center py-4">
-                <p class="trusted-text mb-4">Trusted by 100+ fast-growing company</p>
-                <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap logos-row">
-                    <img src="./image/disnep.svg" alt="Disney" class="logo" />
-                    <img src="./image/Fedex.svg" alt="FedEx" class="logo" />
-                    <img src="./image/fixed.svg" alt="Ford" class="logo" />
-                    <img src="./image/gap.svg" alt="GAP" class="logo" />
-                    <img src="./image/kroger.svg" alt="Kroger" class="logo" />
-                    <img src="./image/uber.svg" alt="Uber" class="logo" />
+            <div class="container text-center py-5">
+                <p class="trusted-text mb-4">Trusted by 100+ fast-growing companies</p>
+
+                <!-- Logo Row: Scroll on mobile, space-between on desktop -->
+                <div
+                    class="logos-slider d-flex align-items-center gap-4 px-2 px-md-0 overflow-auto overflow-md-visible flex-nowrap flex-md-wrap justify-content-md-between">
+                    <img src="./image/disnep.svg" alt="Disney" class="logo img-fluid" />
+                    <img src="./image/Fedex.svg" alt="FedEx" class="logo img-fluid" />
+                    <img src="./image/fixed.svg" alt="Ford" class="logo img-fluid" />
+                    <img src="./image/gap.svg" alt="GAP" class="logo img-fluid" />
+                    <img src="./image/kroger.svg" alt="Kroger" class="logo img-fluid" />
+                    <img src="./image/uber.svg" alt="Uber" class="logo img-fluid" />
                 </div>
-            </div>
             </div>
         </section>
 
         <section class="py-5">
             <div class="container">
-                <!-- Section Heading -->
-                <div class="text-center mb-4">
-                    <p class="text-muted mb-2">How It Works</p>
-                    <h2 class="fw-bold">
-                        <span class="gradient-text">Easy</span> Implementation<br class="d-none d-md-block" />
-                        in Three Easy Steps
-                    </h2>
-                    <p class="text-muted mt-3 mx-auto" style="max-width: 700px;">
-                        Build with AI tool and growth analytics designed to boost user conversion, engagement, and
-                        retention
-                    </p>
+                <div class="row g-4 align-items-stretch">
+
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="p-4 h-100 bg-purple text-white rounded-4 shadow-sm text-center text-md-start d-flex flex-column">
+                            <div class="mb-3">
+                                <img src="./image/work1.svg" alt="Analytics Icon" height="60">
+                            </div>
+                            <h5 class="fw-bold mb-2">Real-time Analytics</h5>
+                            <p class="mb-0">
+                                Our system helping you make informed decisions based on quantifiable data and reducing
+                                the risk of bias in the hiring process.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="p-4 h-100 bg-white text-dark rounded-4 shadow-sm text-center text-md-start d-flex flex-column">
+                            <div class="mb-3">
+                                <img src="./image/work2.svg" alt="Ranking Icon" height="60">
+                            </div>
+                            <h5 class="fw-bold mb-2">Automated Candidate Ranking</h5>
+                            <p class="mb-0">
+                                Our algorithm analyzes candidate profiles, resumes, and application data to identify the
+                                key skills, experiences, and qualifications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="p-4 h-100 bg-white text-dark rounded-4 shadow-sm text-center text-md-start d-flex flex-column">
+                            <div class="mb-3">
+                                <img src="./image/work3.svg" alt="Integration Icon" height="60">
+                            </div>
+                            <h5 class="fw-bold mb-2">Seamless Integration</h5>
+                            <p class="mb-0">
+                                Our user-friendly interface ensures a smooth experience, allowing you to focus on
+                                engaging with the most promising candidates.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- Cards Row -->
-                <div class="row g-4">
-                    <!-- Card 1: Real-time Analytics -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 text-center border-0 shadow-sm bg-light">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <img src="./image/work1.svg" alt="Analytics Icon" width="50" height="50">
-                                </div>
-                                <h5 class="card-title fw-semibold">Real-time Analytics</h5>
-                                <p class="card-text text-muted">
-                                    Our system helps you make informed decisions based on quantifiable data and reduces
-                                    the risk of bias in the hiring process.
-                                </p>
-                            </div>
+            </div>
+        </section>
+        <section class="cta-section py-5">
+            <div class="container">
+                <div class="card border-0 shadow-lg p-4 rounded-4">
+                    <div class="row align-items-center justify-content-between">
+                        <!-- Text Content -->
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <h3 class="fw-bold cta-heading mb-3">
+                                Try Applyfier for free during 14-day with no commitment.<br />
+                                No credit card required
+                            </h3>
+                            <a href="#" class="btn orange-btn rounded-pill px-4 py-2">
+                                Start Here →
+                            </a>
                         </div>
-                    </div>
 
-                    <!-- Card 2: Automated Candidate Ranking -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 text-center border-0 shadow-sm bg-light">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <img src="./image/work2.svg" alt="Ranking Icon" width="50" height="50">
-                                </div>
-                                <h5 class="card-title fw-semibold">Automated Candidate Ranking</h5>
-                                <p class="card-text text-muted">
-                                    Our algorithm analyzes candidate profiles, resumes, and application data to identify
-                                    key skills, experiences, and qualifications.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-12 col-lg-4">
-                        <div class="card h-100 text-center border-0 shadow-sm bg-light">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <img src="./image/work3.svg" alt="Integration Icon" width="50" height="50">
-                                </div>
-                                <h5 class="card-title fw-semibold">Seamless Integration</h5>
-                                <p class="card-text text-muted">
-                                    Our user-friendly interface ensures a smooth experience, allowing you to focus on
-                                    the most promising candidates.
-                                </p>
-                            </div>
+                        <!-- Image Content -->
+                        <div class="col-lg-5 text-center">
+                            <img src="./image/footerupimage.webp" alt="Girl in orange hoodie"
+                                class="img-fluid cta-image" />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
     </main>
 
     <footer class="py-5 bg-white border-top">
