@@ -1,13 +1,6 @@
-// 1. Font Face Definitions
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Regular.ttf') format('truetype'),
-        url('../fonts/Poppins-Medium.ttf') format('woff2'),
-        url('../fonts/Poppins-SemiBold.ttf') format('woff2');
-    font-weight: 400 600;
-    font-display: swap;
-}
-$enable-negative-margins:     true;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$enable-negative-margins: true;
 
 // 2. Font Variables
 $font-family-base: 'Poppins', sans-serif;
@@ -84,7 +77,7 @@ $zindex-levels: (
 // 6. Colors and Misc.
 $body-bg: #EDEEF8;
 $body-color: #2A2A2A;
-// $paragraph-margin-bottom: 0;
+
 
 // 7. Custom Grid Breakpoints
 $custom-grid-breakpoints: (
@@ -104,7 +97,7 @@ $custom-container-max-widths: (
 // 9. Extend Bootstrap with Custom Maps
 $grid-breakpoints: map-merge($grid-breakpoints, $custom-grid-breakpoints);
 $container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
-// $position-utilities: map-merge($position-utilities, $position-utilities);
+
 
 
 // 10. Bootstrap Main Import
@@ -122,32 +115,45 @@ $container-max-widths: map-merge($container-max-widths, $custom-container-max-wi
 @import './testimonial.scss';
 @import './work.scss';
 
-@media (min-width:992px){
-   .w-lg-75 { width: 75%; }
-   .w-lg-60 { width: 60%; }
-   .w-lg-90 { width: 90%; }
-   .bg-lg-transparent{
-    background-color: transparent !important;
-   }
+@media (min-width:992px) {
+    .w-lg-75 {
+        width: 75%;
+    }
+
+    .w-lg-60 {
+        width: 60%;
+    }
+
+    .w-lg-90 {
+        width: 90%;
+    }
+
+    .bg-lg-transparent {
+        background-color: transparent !important;
+    }
 }
 
-.w-80{
+.w-80 {
     width: 5rem;
 }
-.w-180{
+
+.w-180 {
     width: 11.25rem;
 }
-.border-black{
+
+.border-black {
     border-color: #2A2A2A;
 }
-.bg-white{
+
+.bg-white {
     background-color: #FFFFFF;
 }
-.mh-33{
- max-height: 33px;
+
+.mh-33 {
+    max-height: 33px;
 }
 
-// 12. Heading Fonts
+
 h1,
 h2 {
     font-family: $font-poppins-display;
@@ -187,7 +193,6 @@ h5 {
     -webkit-text-fill-color: transparent;
 }
 
-// 15. Blue Shadow Effect
 .blue-effect {
     background-color: #34C1FE;
     box-shadow: 0 0 400px 100px #34C1FE;
@@ -208,5 +213,5 @@ h5 {
     box-shadow: 0 0 1500px 110px #C142C4;
     position: absolute;
     z-index: -2;
-   
+
 }
