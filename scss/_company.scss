@@ -1,0 +1,13 @@
+.logo {
+  max-height: 50px;
+  flex-shrink: 0;
+}
+
+.logos-slider {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

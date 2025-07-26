@@ -1,0 +1,47 @@
+.form-check-input {
+    width: 3rem;
+    height: 1.5rem;
+    background-color: #ccc;
+    border-color: #ccc;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.form-check-input:not(:checked) {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.form-check-input:checked {
+    background-color: #9A72F9;
+    border-color: #9A72F9;
+}
+
+.bg-purple {
+    background-color: #a155f9 !important;
+}
+.bg-white-price {
+    background-color: #FFFFFF!important;
+}
+
+.plan-box {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+}
+
+.custom-check-icon {
+    color: #2A2A2A;
+}
+
+.click-to-white {
+    color: #ffffff;
+}

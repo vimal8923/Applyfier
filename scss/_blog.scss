@@ -1,0 +1,58 @@
+.blog-section {
+  .hr-line {
+    width: 60px;
+    height: 2px;
+    background-color: #ccc;
+  }
+
+  .see-all {
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #7f56d9;
+    }
+
+
+  }
+
+
+  .blog-featured {
+    height: auto;
+    min-height: 360px;
+
+    img {
+      object-fit: cover;
+    }
+
+
+    .featured-content {
+      z-index: 2;
+      max-width: 750px;
+    }
+
+
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.blog-card {
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-title {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .object-fit-cover {
+    object-fit: cover;
+  }
+}
