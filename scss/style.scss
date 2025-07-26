@@ -150,17 +150,12 @@ $container-max-widths: map-merge($container-max-widths, $custom-container-max-wi
     max-height: 33px;
 }
 
-
 h1,
-h2 {
-    font-family: $font-poppins-display;
-
-}
-
+h2
 h3,
 h4,
 h5 {
-    font-family: $font-poppins-medium;
+    font-family: $font-family-base;
 
 }
 

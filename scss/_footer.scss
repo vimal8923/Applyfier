@@ -7,6 +7,11 @@ footer {
       background-color: transparent !important;
     }
   }
+}
 
-
+footer a:hover {
+    text-decoration: underline !important;
+}
+footer a {
+    transition: text-decoration 0.3s ease;
 }
