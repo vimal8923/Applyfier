@@ -1,75 +1,168 @@
-$font-size-base : 1rem;
+// 1. Font Face Definitions
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype'),
+        url('../fonts/Poppins-Medium.ttf') format('woff2'),
+        url('../fonts/Poppins-SemiBold.ttf') format('woff2');
+    font-weight: 400 600;
+    font-display: swap;
+}
+$enable-negative-margins:     true;
+
+// 2. Font Variables
+$font-family-base: 'Poppins', sans-serif;
+$font-poppins-display: 'Poppins', sans-serif;
+$font-poppins-medium: 'Poppins', sans-serif;
+
+// 3. Font Sizes
+$font-size-base: 1rem;
 
 $h1-font-size: $font-size-base * 4.5;
 $h2-font-size: $font-size-base * 3.5;
 $h3-font-size: $font-size-base * 2;
 $h4-font-size: $font-size-base * 1.25;
-$h5-font-size: $font-size-base ;
+$h5-font-size: $font-size-base;
 
-// colors
+// 4. Spacin
 $spacer: 1rem;
+
 $spacers: (
     0: 0,
-    1: $spacer * .25,
-    2: $spacer * .5,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
     3: $spacer,
     4: $spacer * 1.5,
     5: $spacer * 3,
-    12: $spacer * 6.625,
-    20: $spacer * 1.875,
-    28: $spacer * 1.75,
-    38: $spacer * 2.375,
-    32: $spacer * 2,
-    35: $spacer * 2.1875,
-    40: $spacer * 2.5,
-    55: $spacer * 3.4375,
+    20:$spacer *1.25,
+    30:$spacer * 1.875,
+    50: $spacer * 3.125,
     60: $spacer * 3.75,
-    64: $spacer * 4,
-    76: $spacer * 4.75,
-    82: $spacer * 10.125,
+    70: $spacer * 4.375,
+    80: $spacer * 5,
+    100: $spacer * 6.25,
+);
+$position-utilities: (
+    // top
+    'top-20': (property: top, value: 20%),
+    'top-30': (property: top, value: 30%),
+    'top-40': (property: top, value: 40%),
+    'top-50': (property: top, value: 50%),
+    'top-70': (property: top, value: 70%),
+    'top-80': (property: top, value: 80%),
+    'top-100': (property: top, value: 100%),
+    'top-120': (property: top, value: 120%),
+
+    // left
+    'left-0': (property: left, value: 0%),
+    'left-20': (property: left, value: 20%),
+    'left-30': (property: left, value: 30%),
+    'left-40': (property: left, value: 40%),
+    'left-50': (property: left, value: 50%),
+    'left-60': (property: left, value: 60%),
+    'left-70': (property: left, value: 70%),
+    'left-80': (property: left, value: 80%),
+    'left-100': (property: left, value: 100%),
 
 );
 
+@each $class, $options in $position-utilities {
+    .#{$class} {
+        #{map-get($options, property)}: map-get($options, value);
+    }
+}
+
+// 5. Z-Index Levels
 $zindex-levels: (
     n1: -1,
+    n2:-2,
     0: 0,
     1: 1,
     2: 2,
     3: 3
 );
 
+// 6. Colors and Misc.
+$body-bg: #EDEEF8;
+$body-color: #2A2A2A;
+// $paragraph-margin-bottom: 0;
 
-$paragraph-margin-bottom: 0;
-
-
+// 7. Custom Grid Breakpoints
 $custom-grid-breakpoints: (
     xxxl: 1440px
 );
 $custom-container-max-widths: (
-    xxxl:1241px
+    xxxl: 1241px
 );
 
-
+// 8. Bootstrap Core Imports
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';
 @import '../node_modules/bootstrap/scss/nav';
 
-$grid-breakpoints : map-merge($map1: $grid-breakpoints, $map2: $custom-grid-breakpoints);
-$container-max-widths : map-merge($map1: $container-max-widths, $map2: $custom-container-max-widths);
+
+// 9. Extend Bootstrap with Custom Maps
+$grid-breakpoints: map-merge($grid-breakpoints, $custom-grid-breakpoints);
+$container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
+// $position-utilities: map-merge($position-utilities, $position-utilities);
 
 
+// 10. Bootstrap Main Import
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-@import './hero-section';
-@import './header';
+// 11. Section Styles
+@import './about.scss';
+@import './blog.scss';
 @import './company.scss';
-@import'./work.scss';
-@import'footer.scss';
-@import'./cta-section.scss';
+@import './cta-section.scss';
+@import './footer.scss';
+@import './header';
+@import './hero-section';
+@import './price.scss';
+@import './testimonial.scss';
+@import './work.scss';
 
+@media (min-width:992px){
+   .w-lg-75 { width: 75%; }
+   .w-lg-60 { width: 60%; }
+   .w-lg-90 { width: 90%; }
+   .bg-lg-transparent{
+    background-color: transparent !important;
+   }
+}
 
-.orange-btn {
+.w-80{
+    width: 5rem;
+}
+.w-180{
+    width: 11.25rem;
+}
+.border-black{
+    border-color: #2A2A2A;
+}
+.bg-white{
+    background-color: #FFFFFF;
+}
+.mh-33{
+ max-height: 33px;
+}
+
+// 12. Heading Fonts
+h1,
+h2 {
+    font-family: $font-poppins-display;
+
+}
+
+h3,
+h4,
+h5 {
+    font-family: $font-poppins-medium;
+
+}
+
+// 13. Custom Button
+.btn-orange {
     background: linear-gradient(90deg, #ffb347 0%, #ff914d 100%);
     color: #333;
     border: none;
@@ -77,18 +170,43 @@ $container-max-widths : map-merge($map1: $container-max-widths, $map2: $custom-c
     border-radius: 50px;
     cursor: pointer;
     transition: background 0.2s;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
 }
 
-.orange-btn:hover {
+.btn-orange:hover {
     background: linear-gradient(90deg, #ff914d 0%, #ffb347 100%);
 }
 
+// 14. Gradient Text Effect
 .gradient-text {
-  background: linear-gradient(90deg, #9A72F9, #F6731F);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
+    background: linear-gradient(90deg, #9A72F9, #F6731F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// 15. Blue Shadow Effect
+.blue-effect {
+    background-color: #34C1FE;
+    box-shadow: 0 0 400px 100px #34C1FE;
+    position: absolute;
+    z-index: -1;
+}
+
+.yellow-effect {
+    background-color: #F6CD17;
+    box-shadow: 0 0 500px 120px #F6CD17;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.pink-effect {
+    background-color: #C142C4;
+    box-shadow: 0 0 1500px 110px #C142C4;
+    position: absolute;
+    z-index: -2;
+   
 }
