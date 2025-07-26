@@ -7,9 +7,9 @@ new Swiper('.testimonial-slider',{
 
     },
     loop:true,
-    // autoplay:{
-    //     delay:5000
-    // },
+    autoplay:{
+        delay:5000
+    },
     breakpoints:{
         768:{
             slidesPerView:2
