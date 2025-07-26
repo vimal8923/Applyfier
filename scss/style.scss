@@ -109,7 +109,6 @@ $container-max-widths: map-merge($container-max-widths, $custom-container-max-wi
 @import './header';
 @import './hero-section';
 @import './price.scss';
-@import './testimonial.scss';
 @import './work.scss';
 
 @media (min-width:992px) {
@@ -186,24 +185,30 @@ h5 {
 }
 
 .blue-effect {
-    background-color: #34C1FE;
-    box-shadow: 0 0 400px 100px #34C1FE;
+    background-color: #34c1fe8f;
+    box-shadow: 0 0 1500px 100px #34c1fe8f;
     position: absolute;
     z-index: -1;
 }
 
 .yellow-effect {
-    background-color: #F6CD17;
-    box-shadow: 0 0 500px 120px #F6CD17;
+    background-color: #f6cd178c;
+    box-shadow: 0 0 2500px 120px #f6cd178c;
     position: absolute;
     z-index: -1;
     opacity: 0.5;
 }
 
 .pink-effect {
-    background-color: #C142C4;
-    box-shadow: 0 0 1500px 110px #C142C4;
+    background-color: #c242c4ad;
+    box-shadow: 0 0 2000px 110px #c242c4ad;
     position: absolute;
     z-index: -2;
+
+}
+.coustom-linear{
+  background: linear-gradient(to right , #00000002 ,#0000008e );
+  box-shadow: -150px 0 50px 80px #fffdfdb6;
+  translate: 50%;
 
 }
